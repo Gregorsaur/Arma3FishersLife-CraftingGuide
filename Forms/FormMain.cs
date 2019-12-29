@@ -6,101 +6,141 @@ namespace Arma3FishersLifeCraftingGuide.Forms
 {
     public partial class FormMain : Form
     {
+        static FormMain _obj;
+
+        public static FormMain Instance
+        {
+            get
+            {
+                if (_obj == null)
+                {
+                    _obj = new FormMain();
+                }
+                return _obj;
+            }
+        }
+
+        public Panel PnlContainer
+        {
+            get { return panelContainer; }
+            set { panelContainer = value; }
+        }
+
         public FormMain()
         {
             InitializeComponent();
-            //ShowCraftingHub();
+            ShowCraftingHub();
         }
 
         private void ShowCraftingHub()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel, then bring to front
-            CraftingHub panelCraftingHub = new CraftingHub();
-            panelMain.Controls.Add(panelCraftingHub);
-            panelCraftingHub.BringToFront();
+            if (!panelContainer.Controls.Contains(CraftingHub.Instance))
+            {
+                panelContainer.Controls.Add(CraftingHub.Instance);
+                CraftingHub.Instance.Dock = DockStyle.Fill;
+                CraftingHub.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingHub.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingVehicle()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel, then bring to front
-            CraftingVehicle panelCraftingVehicle = new CraftingVehicle();
-            panelMain.Controls.Add(panelCraftingVehicle);
-            panelCraftingVehicle.BringToFront();
+            if (!panelContainer.Controls.Contains(CraftingVehicle.Instance))
+            {
+                panelContainer.Controls.Add(CraftingVehicle.Instance);
+                CraftingVehicle.Instance.Dock = DockStyle.Fill;
+                CraftingVehicle.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingVehicle.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingAircraft()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel
-            CraftingAircraft panelCraftingAircraft = new CraftingAircraft();
-            panelMain.Controls.Add(panelCraftingAircraft);
+         if (!panelContainer.Controls.Contains(CraftingAircraft.Instance))
+            {
+                panelContainer.Controls.Add(CraftingAircraft.Instance);
+                CraftingAircraft.Instance.Dock = DockStyle.Fill;
+                CraftingAircraft.Instance.BringToFront();
+            }   
+         else
+            {
+                CraftingAircraft.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingWatercraft()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel
-            CraftingWatercraft panelCraftingWatercraft = new CraftingWatercraft();
-            panelMain.Controls.Add(panelCraftingWatercraft);
+            if (!panelContainer.Controls.Contains(CraftingWatercraft.Instance))
+            {
+                panelContainer.Controls.Add(CraftingWatercraft.Instance);
+                CraftingWatercraft.Instance.Dock = DockStyle.Fill;
+                CraftingWatercraft.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingWatercraft.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingVehicleParts()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel
-            CraftingVehicleParts panelCraftingVehicleParts = new CraftingVehicleParts();
-            panelMain.Controls.Add(panelCraftingVehicleParts);
+            if (!panelContainer.Controls.Contains(CraftingVehicleParts.Instance))
+            {
+                panelContainer.Controls.Add(CraftingVehicleParts.Instance);
+                CraftingVehicleParts.Instance.Dock = DockStyle.Fill;
+                CraftingVehicleParts.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingVehicleParts.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingFoodDrink()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel
-            CraftingFoodDrink panelCraftingFoodDrink = new CraftingFoodDrink();
-            panelMain.Controls.Add(panelCraftingFoodDrink);
+            if (!panelContainer.Controls.Contains(CraftingFoodDrink.Instance))
+            {
+                panelContainer.Controls.Add(CraftingFoodDrink.Instance);
+                CraftingFoodDrink.Instance.Dock = DockStyle.Fill;
+                CraftingFoodDrink.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingFoodDrink.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingWeaponsAmmo()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel
-            CraftingWeaponsAmmo panelCraftingWeaponsAmmo = new CraftingWeaponsAmmo();
-            panelMain.Controls.Add(panelCraftingWeaponsAmmo);
+            if (!panelContainer.Controls.Contains(CraftingWeaponsAmmo.Instance))
+            {
+                panelContainer.Controls.Add(CraftingWeaponsAmmo.Instance);
+                CraftingWeaponsAmmo.Instance.Dock = DockStyle.Fill;
+                CraftingWeaponsAmmo.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingWeaponsAmmo.Instance.BringToFront();
+            }
         }
 
         private void ShowCraftingOther()
         {
-            //Hide any panels currently shown
-            HideCraftingPanels();
-
-            //Create panel object, then show on main panel
-            CraftingOther panelCraftingOther = new CraftingOther();
-            panelMain.Controls.Add(panelCraftingOther);
-        }
-
-        private void HideCraftingPanels()
-        {
-            //Iterate thru main panel and hide all existing panels
-            //Do this before showing new panel
-            foreach (Control ctrl in panelMain.Controls)
+            if (!panelContainer.Controls.Contains(CraftingOther.Instance))
             {
-                ctrl.Visible = false;
+                panelContainer.Controls.Add(CraftingOther.Instance);
+                CraftingOther.Instance.Dock = DockStyle.Fill;
+                CraftingOther.Instance.BringToFront();
+            }
+            else
+            {
+                CraftingOther.Instance.BringToFront();
             }
         }
 

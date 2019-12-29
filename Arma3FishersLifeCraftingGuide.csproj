@@ -102,12 +102,6 @@
     <Compile Include="UserControls\CraftingWeaponsAmmo.Designer.cs">
       <DependentUpon>CraftingWeaponsAmmo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,9 +133,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CraftingWeaponsAmmo.resx">
       <DependentUpon>CraftingWeaponsAmmo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

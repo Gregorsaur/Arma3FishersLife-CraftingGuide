@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.staticPanelHeader = new System.Windows.Forms.Panel();
+            this.staticHeaderLogo = new System.Windows.Forms.PictureBox();
             this.staticLabelHeader2 = new System.Windows.Forms.Label();
             this.staticLabelHeader1 = new System.Windows.Forms.Label();
             this.staticPanelFooter = new System.Windows.Forms.Panel();
             this.staticLabelFooter1 = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panelNavigation = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonNavInfo = new System.Windows.Forms.Button();
@@ -46,12 +47,11 @@
             this.buttonNavAircraft = new System.Windows.Forms.Button();
             this.buttonNavVehicles = new System.Windows.Forms.Button();
             this.buttonNavHome = new System.Windows.Forms.Button();
-            this.staticHeaderLogo = new System.Windows.Forms.PictureBox();
             this.staticPanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).BeginInit();
             this.staticPanelFooter.SuspendLayout();
             this.panelNavigation.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // staticPanelHeader
@@ -64,6 +64,17 @@
             this.staticPanelHeader.Name = "staticPanelHeader";
             this.staticPanelHeader.Size = new System.Drawing.Size(1216, 113);
             this.staticPanelHeader.TabIndex = 24;
+            // 
+            // staticHeaderLogo
+            // 
+            this.staticHeaderLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.staticHeaderLogo.Image = ((System.Drawing.Image)(resources.GetObject("staticHeaderLogo.Image")));
+            this.staticHeaderLogo.Location = new System.Drawing.Point(12, 12);
+            this.staticHeaderLogo.Name = "staticHeaderLogo";
+            this.staticHeaderLogo.Size = new System.Drawing.Size(95, 93);
+            this.staticHeaderLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.staticHeaderLogo.TabIndex = 9;
+            this.staticHeaderLogo.TabStop = false;
             // 
             // staticLabelHeader2
             // 
@@ -108,13 +119,13 @@
     "9";
             this.staticLabelFooter1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panelMain
+            // panelContainer
             // 
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelMain.Location = new System.Drawing.Point(160, 128);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1064, 520);
-            this.panelMain.TabIndex = 29;
+            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelContainer.Location = new System.Drawing.Point(160, 128);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1064, 520);
+            this.panelContainer.TabIndex = 29;
             // 
             // panelNavigation
             // 
@@ -156,6 +167,7 @@
             this.buttonNavInfo.TabIndex = 8;
             this.buttonNavInfo.Text = "Info";
             this.buttonNavInfo.UseVisualStyleBackColor = true;
+            this.buttonNavInfo.Click += new System.EventHandler(this.ButtonNavInfo_Click);
             // 
             // buttonNavOther
             // 
@@ -170,6 +182,7 @@
             this.buttonNavOther.TabIndex = 7;
             this.buttonNavOther.Text = "Other";
             this.buttonNavOther.UseVisualStyleBackColor = true;
+            this.buttonNavOther.Click += new System.EventHandler(this.ButtonNavOther_Click);
             // 
             // buttonNavWeaponsAmmo
             // 
@@ -184,6 +197,7 @@
             this.buttonNavWeaponsAmmo.TabIndex = 6;
             this.buttonNavWeaponsAmmo.Text = "Weapons/Ammo";
             this.buttonNavWeaponsAmmo.UseVisualStyleBackColor = true;
+            this.buttonNavWeaponsAmmo.Click += new System.EventHandler(this.ButtonNavWeaponsAmmo_Click);
             // 
             // buttonNavFoodDrink
             // 
@@ -198,6 +212,7 @@
             this.buttonNavFoodDrink.TabIndex = 5;
             this.buttonNavFoodDrink.Text = "Food/Drink";
             this.buttonNavFoodDrink.UseVisualStyleBackColor = true;
+            this.buttonNavFoodDrink.Click += new System.EventHandler(this.ButtonNavFoodDrink_Click);
             // 
             // buttonNavVehicleParts
             // 
@@ -212,6 +227,7 @@
             this.buttonNavVehicleParts.TabIndex = 4;
             this.buttonNavVehicleParts.Text = "Vehicle Parts";
             this.buttonNavVehicleParts.UseVisualStyleBackColor = true;
+            this.buttonNavVehicleParts.Click += new System.EventHandler(this.ButtonNavVehicleParts_Click);
             // 
             // buttonNavWatercraft
             // 
@@ -226,6 +242,7 @@
             this.buttonNavWatercraft.TabIndex = 3;
             this.buttonNavWatercraft.Text = "Watercraft";
             this.buttonNavWatercraft.UseVisualStyleBackColor = true;
+            this.buttonNavWatercraft.Click += new System.EventHandler(this.ButtonNavWatercraft_Click);
             // 
             // buttonNavAircraft
             // 
@@ -240,6 +257,7 @@
             this.buttonNavAircraft.TabIndex = 2;
             this.buttonNavAircraft.Text = "Aircraft";
             this.buttonNavAircraft.UseVisualStyleBackColor = true;
+            this.buttonNavAircraft.Click += new System.EventHandler(this.ButtonNavAircraft_Click);
             // 
             // buttonNavVehicles
             // 
@@ -254,6 +272,7 @@
             this.buttonNavVehicles.TabIndex = 1;
             this.buttonNavVehicles.Text = "Vehicles";
             this.buttonNavVehicles.UseVisualStyleBackColor = true;
+            this.buttonNavVehicles.Click += new System.EventHandler(this.ButtonNavVehicles_Click);
             // 
             // buttonNavHome
             // 
@@ -268,17 +287,7 @@
             this.buttonNavHome.TabIndex = 0;
             this.buttonNavHome.Text = "Home";
             this.buttonNavHome.UseVisualStyleBackColor = true;
-            // 
-            // staticHeaderLogo
-            // 
-            this.staticHeaderLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.staticHeaderLogo.Image = ((System.Drawing.Image)(resources.GetObject("staticHeaderLogo.Image")));
-            this.staticHeaderLogo.Location = new System.Drawing.Point(12, 12);
-            this.staticHeaderLogo.Name = "staticHeaderLogo";
-            this.staticHeaderLogo.Size = new System.Drawing.Size(95, 93);
-            this.staticHeaderLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.staticHeaderLogo.TabIndex = 9;
-            this.staticHeaderLogo.TabStop = false;
+            this.buttonNavHome.Click += new System.EventHandler(this.ButtonNavHome_Click);
             // 
             // FormMain
             // 
@@ -286,7 +295,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1233, 714);
             this.Controls.Add(this.panelNavigation);
-            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.staticPanelHeader);
             this.Controls.Add(this.staticPanelFooter);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -295,10 +304,10 @@
             this.Text = "Arma 3 Fisher\'s Life - Crafting Guide";
             this.staticPanelHeader.ResumeLayout(false);
             this.staticPanelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).EndInit();
             this.staticPanelFooter.ResumeLayout(false);
             this.panelNavigation.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,7 +319,7 @@
         private System.Windows.Forms.Label staticLabelHeader1;
         private System.Windows.Forms.Panel staticPanelFooter;
         private System.Windows.Forms.Label staticLabelFooter1;
-        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelNavigation;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonNavInfo;
