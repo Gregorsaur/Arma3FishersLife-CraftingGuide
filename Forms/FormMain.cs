@@ -30,6 +30,8 @@ namespace Arma3FishersLifeCraftingGuide.Forms
         {
             InitializeComponent();
             ShowCraftingHub();
+            panelNavSide.Height = buttonNavHome.Height;
+            panelNavSide.Top = buttonNavHome.Top;
         }
 
         private void ShowCraftingHub()
@@ -144,49 +146,112 @@ namespace Arma3FishersLifeCraftingGuide.Forms
             }
         }
 
+        private void ShowUserSettings()
+        {
+            if (!panelContainer.Controls.Contains(UserSettings.Instance))
+            {
+                panelContainer.Controls.Add(UserSettings.Instance);
+                UserSettings.Instance.Dock = DockStyle.Fill;
+                UserSettings.Instance.BringToFront();
+            }
+            else
+            {
+                UserSettings.Instance.BringToFront();
+            }
+        }
+
+        private void ShowHelpPage()
+        {
+            if (!panelContainer.Controls.Contains(HelpPage.Instance))
+            {
+                panelContainer.Controls.Add(HelpPage.Instance);
+                HelpPage.Instance.Dock = DockStyle.Fill;
+                HelpPage.Instance.BringToFront();
+            }
+            else
+            {
+                HelpPage.Instance.BringToFront();
+            }
+        }
+
         private void ButtonNavHome_Click(object sender, EventArgs e)
         {
             ShowCraftingHub();
+
+            panelNavSide.Height = buttonNavHome.Height;
+            panelNavSide.Top = buttonNavHome.Top;
         }
 
         private void ButtonNavVehicles_Click(object sender, EventArgs e)
         {
             ShowCraftingVehicle();
+
+            panelNavSide.Height = buttonNavVehicles.Height;
+            panelNavSide.Top = buttonNavVehicles.Top;
         }
 
         private void ButtonNavAircraft_Click(object sender, EventArgs e)
         {
             ShowCraftingAircraft();
+
+            panelNavSide.Height = buttonNavAircraft.Height;
+            panelNavSide.Top = buttonNavAircraft.Top;
         }
 
         private void ButtonNavWatercraft_Click(object sender, EventArgs e)
         {
             ShowCraftingWatercraft();
+
+            panelNavSide.Height = buttonNavWatercraft.Height;
+            panelNavSide.Top = buttonNavWatercraft.Top;
         }
 
         private void ButtonNavVehicleParts_Click(object sender, EventArgs e)
         {
             ShowCraftingVehicleParts();
+
+            panelNavSide.Height = buttonNavVehicleParts.Height;
+            panelNavSide.Top = buttonNavVehicleParts.Top;
         }
 
         private void ButtonNavFoodDrink_Click(object sender, EventArgs e)
         {
             ShowCraftingFoodDrink();
+
+            panelNavSide.Height = buttonNavFoodDrink.Height;
+            panelNavSide.Top = buttonNavFoodDrink.Top;
         }
 
         private void ButtonNavWeaponsAmmo_Click(object sender, EventArgs e)
         {
             ShowCraftingWeaponsAmmo();
+
+            panelNavSide.Height = buttonNavWeaponsAmmo.Height;
+            panelNavSide.Top = buttonNavWeaponsAmmo.Top;
         }
 
         private void ButtonNavOther_Click(object sender, EventArgs e)
         {
             ShowCraftingOther();
+
+            panelNavSide.Height = buttonNavOther.Height;
+            panelNavSide.Top = buttonNavOther.Top;
         }
 
-        private void ButtonNavInfo_Click(object sender, EventArgs e)
+        private void ButtonNavSettings_Click(object sender, EventArgs e)
         {
-            //todo
+            ShowUserSettings();
+
+            panelNavSide.Height = buttonNavSettings.Height;
+            panelNavSide.Top = buttonNavSettings.Top;
+        }
+
+        private void ButtonNavHelp_Click(object sender, EventArgs e)
+        {
+            ShowHelpPage();
+
+            panelNavSide.Height = buttonNavHelp.Height;
+            panelNavSide.Top = buttonNavHelp.Top;
         }
     }
 }

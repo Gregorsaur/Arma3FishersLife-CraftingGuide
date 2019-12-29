@@ -37,8 +37,8 @@
             this.staticLabelFooter1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelNavigation = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonNavInfo = new System.Windows.Forms.Button();
+            this.buttonNavHelp = new System.Windows.Forms.Button();
+            this.buttonNavSettings = new System.Windows.Forms.Button();
             this.buttonNavOther = new System.Windows.Forms.Button();
             this.buttonNavWeaponsAmmo = new System.Windows.Forms.Button();
             this.buttonNavFoodDrink = new System.Windows.Forms.Button();
@@ -47,11 +47,11 @@
             this.buttonNavAircraft = new System.Windows.Forms.Button();
             this.buttonNavVehicles = new System.Windows.Forms.Button();
             this.buttonNavHome = new System.Windows.Forms.Button();
+            this.panelNavSide = new System.Windows.Forms.Panel();
             this.staticPanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).BeginInit();
             this.staticPanelFooter.SuspendLayout();
             this.panelNavigation.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // staticPanelHeader
@@ -62,7 +62,7 @@
             this.staticPanelHeader.Controls.Add(this.staticLabelHeader1);
             this.staticPanelHeader.Location = new System.Drawing.Point(8, 8);
             this.staticPanelHeader.Name = "staticPanelHeader";
-            this.staticPanelHeader.Size = new System.Drawing.Size(1216, 113);
+            this.staticPanelHeader.Size = new System.Drawing.Size(1215, 113);
             this.staticPanelHeader.TabIndex = 24;
             // 
             // staticHeaderLogo
@@ -104,7 +104,7 @@
             this.staticPanelFooter.Controls.Add(this.staticLabelFooter1);
             this.staticPanelFooter.Location = new System.Drawing.Point(8, 656);
             this.staticPanelFooter.Name = "staticPanelFooter";
-            this.staticPanelFooter.Size = new System.Drawing.Size(1216, 47);
+            this.staticPanelFooter.Size = new System.Drawing.Size(1215, 47);
             this.staticPanelFooter.TabIndex = 25;
             // 
             // staticLabelFooter1
@@ -122,172 +122,196 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelContainer.Location = new System.Drawing.Point(160, 128);
+            this.panelContainer.Location = new System.Drawing.Point(204, 128);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1064, 520);
+            this.panelContainer.Size = new System.Drawing.Size(1020, 520);
             this.panelContainer.TabIndex = 29;
             // 
             // panelNavigation
             // 
-            this.panelNavigation.Controls.Add(this.panel1);
-            this.panelNavigation.Location = new System.Drawing.Point(8, 128);
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.panelNavigation.Controls.Add(this.panelNavSide);
+            this.panelNavigation.Controls.Add(this.buttonNavHelp);
+            this.panelNavigation.Controls.Add(this.buttonNavSettings);
+            this.panelNavigation.Controls.Add(this.buttonNavOther);
+            this.panelNavigation.Controls.Add(this.buttonNavWeaponsAmmo);
+            this.panelNavigation.Controls.Add(this.buttonNavFoodDrink);
+            this.panelNavigation.Controls.Add(this.buttonNavVehicleParts);
+            this.panelNavigation.Controls.Add(this.buttonNavWatercraft);
+            this.panelNavigation.Controls.Add(this.buttonNavAircraft);
+            this.panelNavigation.Controls.Add(this.buttonNavVehicles);
+            this.panelNavigation.Controls.Add(this.buttonNavHome);
+            this.panelNavigation.Location = new System.Drawing.Point(9, 128);
             this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(152, 520);
+            this.panelNavigation.Size = new System.Drawing.Size(195, 520);
             this.panelNavigation.TabIndex = 30;
             // 
-            // panel1
+            // buttonNavHelp
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.panel1.Controls.Add(this.buttonNavInfo);
-            this.panel1.Controls.Add(this.buttonNavOther);
-            this.panel1.Controls.Add(this.buttonNavWeaponsAmmo);
-            this.panel1.Controls.Add(this.buttonNavFoodDrink);
-            this.panel1.Controls.Add(this.buttonNavVehicleParts);
-            this.panel1.Controls.Add(this.buttonNavWatercraft);
-            this.panel1.Controls.Add(this.buttonNavAircraft);
-            this.panel1.Controls.Add(this.buttonNavVehicles);
-            this.panel1.Controls.Add(this.buttonNavHome);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 520);
-            this.panel1.TabIndex = 3;
+            this.buttonNavHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavHelp.FlatAppearance.BorderSize = 0;
+            this.buttonNavHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavHelp.Image = global::Arma3FishersLifeCraftingGuide.Properties.Resources.information;
+            this.buttonNavHelp.Location = new System.Drawing.Point(10, 468);
+            this.buttonNavHelp.Name = "buttonNavHelp";
+            this.buttonNavHelp.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavHelp.TabIndex = 8;
+            this.buttonNavHelp.Text = "   Help";
+            this.buttonNavHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonNavHelp.UseVisualStyleBackColor = true;
             // 
-            // buttonNavInfo
+            // buttonNavSettings
             // 
-            this.buttonNavInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavInfo.Location = new System.Drawing.Point(0, 464);
-            this.buttonNavInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonNavInfo.Name = "buttonNavInfo";
-            this.buttonNavInfo.Size = new System.Drawing.Size(152, 58);
-            this.buttonNavInfo.TabIndex = 8;
-            this.buttonNavInfo.Text = "Info";
-            this.buttonNavInfo.UseVisualStyleBackColor = true;
-            this.buttonNavInfo.Click += new System.EventHandler(this.ButtonNavInfo_Click);
+            this.buttonNavSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavSettings.FlatAppearance.BorderSize = 0;
+            this.buttonNavSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavSettings.Image = global::Arma3FishersLifeCraftingGuide.Properties.Resources.settings;
+            this.buttonNavSettings.Location = new System.Drawing.Point(10, 416);
+            this.buttonNavSettings.Name = "buttonNavSettings";
+            this.buttonNavSettings.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavSettings.TabIndex = 7;
+            this.buttonNavSettings.Text = "   Settings";
+            this.buttonNavSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonNavSettings.UseVisualStyleBackColor = true;
+            this.buttonNavSettings.Click += new System.EventHandler(this.ButtonNavSettings_Click);
             // 
             // buttonNavOther
             // 
-            this.buttonNavOther.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavOther.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavOther.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavOther.Location = new System.Drawing.Point(0, 406);
-            this.buttonNavOther.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavOther.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavOther.FlatAppearance.BorderSize = 0;
+            this.buttonNavOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavOther.Image = global::Arma3FishersLifeCraftingGuide.Properties.Resources.edit;
+            this.buttonNavOther.Location = new System.Drawing.Point(10, 364);
             this.buttonNavOther.Name = "buttonNavOther";
-            this.buttonNavOther.Size = new System.Drawing.Size(152, 58);
-            this.buttonNavOther.TabIndex = 7;
-            this.buttonNavOther.Text = "Other";
+            this.buttonNavOther.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavOther.TabIndex = 5;
+            this.buttonNavOther.Text = "   Other";
+            this.buttonNavOther.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavOther.UseVisualStyleBackColor = true;
             this.buttonNavOther.Click += new System.EventHandler(this.ButtonNavOther_Click);
             // 
             // buttonNavWeaponsAmmo
             // 
-            this.buttonNavWeaponsAmmo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavWeaponsAmmo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavWeaponsAmmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavWeaponsAmmo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavWeaponsAmmo.Location = new System.Drawing.Point(0, 348);
-            this.buttonNavWeaponsAmmo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavWeaponsAmmo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavWeaponsAmmo.FlatAppearance.BorderSize = 0;
+            this.buttonNavWeaponsAmmo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavWeaponsAmmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavWeaponsAmmo.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavWeaponsAmmo.Image")));
+            this.buttonNavWeaponsAmmo.Location = new System.Drawing.Point(10, 312);
             this.buttonNavWeaponsAmmo.Name = "buttonNavWeaponsAmmo";
-            this.buttonNavWeaponsAmmo.Size = new System.Drawing.Size(152, 58);
+            this.buttonNavWeaponsAmmo.Size = new System.Drawing.Size(185, 52);
             this.buttonNavWeaponsAmmo.TabIndex = 6;
-            this.buttonNavWeaponsAmmo.Text = "Weapons/Ammo";
+            this.buttonNavWeaponsAmmo.Text = "   Weapons/Ammo";
+            this.buttonNavWeaponsAmmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavWeaponsAmmo.UseVisualStyleBackColor = true;
             this.buttonNavWeaponsAmmo.Click += new System.EventHandler(this.ButtonNavWeaponsAmmo_Click);
             // 
             // buttonNavFoodDrink
             // 
-            this.buttonNavFoodDrink.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavFoodDrink.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavFoodDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavFoodDrink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavFoodDrink.Location = new System.Drawing.Point(0, 290);
-            this.buttonNavFoodDrink.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavFoodDrink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavFoodDrink.FlatAppearance.BorderSize = 0;
+            this.buttonNavFoodDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavFoodDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavFoodDrink.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavFoodDrink.Image")));
+            this.buttonNavFoodDrink.Location = new System.Drawing.Point(10, 260);
             this.buttonNavFoodDrink.Name = "buttonNavFoodDrink";
-            this.buttonNavFoodDrink.Size = new System.Drawing.Size(152, 58);
-            this.buttonNavFoodDrink.TabIndex = 5;
-            this.buttonNavFoodDrink.Text = "Food/Drink";
+            this.buttonNavFoodDrink.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavFoodDrink.TabIndex = 4;
+            this.buttonNavFoodDrink.Text = "   Food/Drink";
+            this.buttonNavFoodDrink.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavFoodDrink.UseVisualStyleBackColor = true;
             this.buttonNavFoodDrink.Click += new System.EventHandler(this.ButtonNavFoodDrink_Click);
             // 
             // buttonNavVehicleParts
             // 
-            this.buttonNavVehicleParts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavVehicleParts.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavVehicleParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavVehicleParts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavVehicleParts.Location = new System.Drawing.Point(0, 232);
-            this.buttonNavVehicleParts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavVehicleParts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavVehicleParts.FlatAppearance.BorderSize = 0;
+            this.buttonNavVehicleParts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavVehicleParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavVehicleParts.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavVehicleParts.Image")));
+            this.buttonNavVehicleParts.Location = new System.Drawing.Point(10, 208);
             this.buttonNavVehicleParts.Name = "buttonNavVehicleParts";
-            this.buttonNavVehicleParts.Size = new System.Drawing.Size(152, 58);
-            this.buttonNavVehicleParts.TabIndex = 4;
-            this.buttonNavVehicleParts.Text = "Vehicle Parts";
+            this.buttonNavVehicleParts.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavVehicleParts.TabIndex = 2;
+            this.buttonNavVehicleParts.Text = "   Vehicle Parts";
+            this.buttonNavVehicleParts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavVehicleParts.UseVisualStyleBackColor = true;
             this.buttonNavVehicleParts.Click += new System.EventHandler(this.ButtonNavVehicleParts_Click);
             // 
             // buttonNavWatercraft
             // 
-            this.buttonNavWatercraft.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavWatercraft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavWatercraft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavWatercraft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavWatercraft.Location = new System.Drawing.Point(0, 174);
-            this.buttonNavWatercraft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavWatercraft.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavWatercraft.FlatAppearance.BorderSize = 0;
+            this.buttonNavWatercraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavWatercraft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavWatercraft.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavWatercraft.Image")));
+            this.buttonNavWatercraft.Location = new System.Drawing.Point(10, 156);
             this.buttonNavWatercraft.Name = "buttonNavWatercraft";
-            this.buttonNavWatercraft.Size = new System.Drawing.Size(152, 58);
+            this.buttonNavWatercraft.Size = new System.Drawing.Size(185, 52);
             this.buttonNavWatercraft.TabIndex = 3;
-            this.buttonNavWatercraft.Text = "Watercraft";
+            this.buttonNavWatercraft.Text = "   Watercraft";
+            this.buttonNavWatercraft.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavWatercraft.UseVisualStyleBackColor = true;
             this.buttonNavWatercraft.Click += new System.EventHandler(this.ButtonNavWatercraft_Click);
             // 
             // buttonNavAircraft
             // 
-            this.buttonNavAircraft.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavAircraft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavAircraft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavAircraft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavAircraft.Location = new System.Drawing.Point(0, 116);
-            this.buttonNavAircraft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavAircraft.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavAircraft.FlatAppearance.BorderSize = 0;
+            this.buttonNavAircraft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavAircraft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavAircraft.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavAircraft.Image")));
+            this.buttonNavAircraft.Location = new System.Drawing.Point(10, 104);
             this.buttonNavAircraft.Name = "buttonNavAircraft";
-            this.buttonNavAircraft.Size = new System.Drawing.Size(152, 58);
-            this.buttonNavAircraft.TabIndex = 2;
-            this.buttonNavAircraft.Text = "Aircraft";
+            this.buttonNavAircraft.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavAircraft.TabIndex = 1;
+            this.buttonNavAircraft.Text = "   Aircraft";
+            this.buttonNavAircraft.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavAircraft.UseVisualStyleBackColor = true;
             this.buttonNavAircraft.Click += new System.EventHandler(this.ButtonNavAircraft_Click);
             // 
             // buttonNavVehicles
             // 
-            this.buttonNavVehicles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavVehicles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavVehicles.Location = new System.Drawing.Point(0, 58);
-            this.buttonNavVehicles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavVehicles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavVehicles.FlatAppearance.BorderSize = 0;
+            this.buttonNavVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavVehicles.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavVehicles.Image")));
+            this.buttonNavVehicles.Location = new System.Drawing.Point(10, 52);
             this.buttonNavVehicles.Name = "buttonNavVehicles";
-            this.buttonNavVehicles.Size = new System.Drawing.Size(152, 58);
-            this.buttonNavVehicles.TabIndex = 1;
-            this.buttonNavVehicles.Text = "Vehicles";
+            this.buttonNavVehicles.Size = new System.Drawing.Size(185, 52);
+            this.buttonNavVehicles.TabIndex = 0;
+            this.buttonNavVehicles.Text = "   Vehicles";
+            this.buttonNavVehicles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavVehicles.UseVisualStyleBackColor = true;
             this.buttonNavVehicles.Click += new System.EventHandler(this.ButtonNavVehicles_Click);
             // 
             // buttonNavHome
             // 
-            this.buttonNavHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNavHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonNavHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonNavHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonNavHome.Location = new System.Drawing.Point(0, 0);
-            this.buttonNavHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNavHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNavHome.FlatAppearance.BorderSize = 0;
+            this.buttonNavHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNavHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonNavHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavHome.Image")));
+            this.buttonNavHome.Location = new System.Drawing.Point(10, 0);
             this.buttonNavHome.Name = "buttonNavHome";
-            this.buttonNavHome.Size = new System.Drawing.Size(152, 58);
+            this.buttonNavHome.Size = new System.Drawing.Size(185, 52);
             this.buttonNavHome.TabIndex = 0;
-            this.buttonNavHome.Text = "Home";
+            this.buttonNavHome.Text = "   Home";
+            this.buttonNavHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavHome.UseVisualStyleBackColor = true;
             this.buttonNavHome.Click += new System.EventHandler(this.ButtonNavHome_Click);
+            // 
+            // panelNavSide
+            // 
+            this.panelNavSide.BackColor = System.Drawing.Color.Lime;
+            this.panelNavSide.Location = new System.Drawing.Point(0, 0);
+            this.panelNavSide.Name = "panelNavSide";
+            this.panelNavSide.Size = new System.Drawing.Size(10, 52);
+            this.panelNavSide.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -307,7 +331,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).EndInit();
             this.staticPanelFooter.ResumeLayout(false);
             this.panelNavigation.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -321,15 +344,16 @@
         private System.Windows.Forms.Label staticLabelFooter1;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelNavigation;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonNavInfo;
+        private System.Windows.Forms.Button buttonNavAircraft;
+        private System.Windows.Forms.Button buttonNavVehicles;
+        private System.Windows.Forms.Button buttonNavHome;
+        private System.Windows.Forms.Button buttonNavHelp;
+        private System.Windows.Forms.Button buttonNavSettings;
         private System.Windows.Forms.Button buttonNavOther;
         private System.Windows.Forms.Button buttonNavWeaponsAmmo;
         private System.Windows.Forms.Button buttonNavFoodDrink;
         private System.Windows.Forms.Button buttonNavVehicleParts;
         private System.Windows.Forms.Button buttonNavWatercraft;
-        private System.Windows.Forms.Button buttonNavAircraft;
-        private System.Windows.Forms.Button buttonNavVehicles;
-        private System.Windows.Forms.Button buttonNavHome;
+        private System.Windows.Forms.Panel panelNavSide;
     }
 }
