@@ -33,10 +33,10 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Agency FB", 55F);
+            this.label1.Font = new System.Drawing.Font("Agency FB", 53F);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1064, 520);
+            this.label1.Size = new System.Drawing.Size(1020, 520);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome to the\r\nCrafting Guide!\r\n\r\nTo get started, choose what you would like to " +
     "craft via the navigation bar on the left.";
@@ -50,7 +50,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CraftingHub";
-            this.Size = new System.Drawing.Size(1064, 520);
+            this.Size = new System.Drawing.Size(1020, 520);
             this.ResumeLayout(false);
 
         }

@@ -67,7 +67,7 @@
             this.comboBoxChooseVehiclePartSteel.Location = new System.Drawing.Point(16, 56);
             this.comboBoxChooseVehiclePartSteel.Name = "comboBoxChooseVehiclePartSteel";
             this.comboBoxChooseVehiclePartSteel.Size = new System.Drawing.Size(256, 28);
-            this.comboBoxChooseVehiclePartSteel.TabIndex = 2;
+            this.comboBoxChooseVehiclePartSteel.TabIndex = 1;
             // 
             // comboBoxChooseVehiclePartAluminum
             // 
@@ -89,7 +89,7 @@
             this.comboBoxChooseVehiclePartAluminum.Location = new System.Drawing.Point(288, 56);
             this.comboBoxChooseVehiclePartAluminum.Name = "comboBoxChooseVehiclePartAluminum";
             this.comboBoxChooseVehiclePartAluminum.Size = new System.Drawing.Size(256, 28);
-            this.comboBoxChooseVehiclePartAluminum.TabIndex = 4;
+            this.comboBoxChooseVehiclePartAluminum.TabIndex = 2;
             // 
             // staticLabelAluminumParts
             // 
@@ -113,7 +113,7 @@
             this.comboBoxChooseVehiclePartOther.Location = new System.Drawing.Point(560, 56);
             this.comboBoxChooseVehiclePartOther.Name = "comboBoxChooseVehiclePartOther";
             this.comboBoxChooseVehiclePartOther.Size = new System.Drawing.Size(256, 28);
-            this.comboBoxChooseVehiclePartOther.TabIndex = 6;
+            this.comboBoxChooseVehiclePartOther.TabIndex = 3;
             // 
             // staticLabelOtherParts
             // 
@@ -137,7 +137,7 @@
             this.Controls.Add(this.comboBoxChooseVehiclePartSteel);
             this.Controls.Add(this.staticLabelSteelParts);
             this.Name = "CraftingVehicleParts";
-            this.Size = new System.Drawing.Size(1064, 520);
+            this.Size = new System.Drawing.Size(1020, 520);
             this.ResumeLayout(false);
 
         }
