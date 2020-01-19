@@ -60,6 +60,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Recipes\RecipeVehicleParts.cs" />
+    <Compile Include="Recipes\RecipeVehicles.cs" />
     <Compile Include="UserControls\CraftingAircraft.cs">
       <SubType>UserControl</SubType>
     </Compile>

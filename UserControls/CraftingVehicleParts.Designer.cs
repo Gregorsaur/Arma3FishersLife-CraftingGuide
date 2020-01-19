@@ -28,127 +28,158 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.staticLabelSteelParts = new System.Windows.Forms.Label();
-            this.comboBoxChooseVehiclePartSteel = new System.Windows.Forms.ComboBox();
-            this.comboBoxChooseVehiclePartAluminum = new System.Windows.Forms.ComboBox();
-            this.staticLabelAluminumParts = new System.Windows.Forms.Label();
-            this.comboBoxChooseVehiclePartOther = new System.Windows.Forms.ComboBox();
-            this.staticLabelOtherParts = new System.Windows.Forms.Label();
+            this.labelDebug = new System.Windows.Forms.Label();
+            this.buttonPartsSteel = new System.Windows.Forms.Button();
+            this.buttonPartsOther = new System.Windows.Forms.Button();
+            this.buttonPartsAluminum = new System.Windows.Forms.Button();
+            this.groupBoxSelectValues = new System.Windows.Forms.GroupBox();
+            this.radioButtonPallets = new System.Windows.Forms.RadioButton();
+            this.radioButtonIngots = new System.Windows.Forms.RadioButton();
+            this.radioButtonSheets = new System.Windows.Forms.RadioButton();
+            this.radioButtonOres = new System.Windows.Forms.RadioButton();
+            this.groupBoxSelectValues.SuspendLayout();
             this.SuspendLayout();
             // 
-            // staticLabelSteelParts
+            // labelDebug
             // 
-            this.staticLabelSteelParts.Font = new System.Drawing.Font("Agency FB", 24F);
-            this.staticLabelSteelParts.Location = new System.Drawing.Point(16, 16);
-            this.staticLabelSteelParts.Name = "staticLabelSteelParts";
-            this.staticLabelSteelParts.Size = new System.Drawing.Size(256, 39);
-            this.staticLabelSteelParts.TabIndex = 1;
-            this.staticLabelSteelParts.Text = "Steel Parts";
-            this.staticLabelSteelParts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.labelDebug.ForeColor = System.Drawing.Color.White;
+            this.labelDebug.Location = new System.Drawing.Point(8, 152);
+            this.labelDebug.Name = "labelDebug";
+            this.labelDebug.Size = new System.Drawing.Size(808, 336);
+            this.labelDebug.TabIndex = 6;
             // 
-            // comboBoxChooseVehiclePartSteel
+            // buttonPartsSteel
             // 
-            this.comboBoxChooseVehiclePartSteel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.comboBoxChooseVehiclePartSteel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxChooseVehiclePartSteel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxChooseVehiclePartSteel.FormattingEnabled = true;
-            this.comboBoxChooseVehiclePartSteel.Items.AddRange(new object[] {
-            "Engine",
-            "Transmission",
-            "Radiator",
-            "Brake Rotors",
-            "Differential",
-            "Drive Shaft",
-            "Steel Rims",
-            "High End Transmission",
-            "High End Radiator",
-            "High End Brake Rotors",
-            "High End Differential"});
-            this.comboBoxChooseVehiclePartSteel.Location = new System.Drawing.Point(16, 56);
-            this.comboBoxChooseVehiclePartSteel.Name = "comboBoxChooseVehiclePartSteel";
-            this.comboBoxChooseVehiclePartSteel.Size = new System.Drawing.Size(256, 28);
-            this.comboBoxChooseVehiclePartSteel.TabIndex = 1;
+            this.buttonPartsSteel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPartsSteel.FlatAppearance.BorderSize = 0;
+            this.buttonPartsSteel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPartsSteel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonPartsSteel.Location = new System.Drawing.Point(8, 8);
+            this.buttonPartsSteel.Name = "buttonPartsSteel";
+            this.buttonPartsSteel.Size = new System.Drawing.Size(200, 52);
+            this.buttonPartsSteel.TabIndex = 7;
+            this.buttonPartsSteel.Text = "Steel Parts";
+            this.buttonPartsSteel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPartsSteel.UseVisualStyleBackColor = true;
+            this.buttonPartsSteel.Click += new System.EventHandler(this.ButtonPartsSteel_Click);
             // 
-            // comboBoxChooseVehiclePartAluminum
+            // buttonPartsOther
             // 
-            this.comboBoxChooseVehiclePartAluminum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.comboBoxChooseVehiclePartAluminum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxChooseVehiclePartAluminum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxChooseVehiclePartAluminum.FormattingEnabled = true;
-            this.comboBoxChooseVehiclePartAluminum.Items.AddRange(new object[] {
-            "4WD Differential",
-            "Fuel Tank",
-            "Chassis Rails",
-            "Exhaust Pipes",
-            "Alloy Rims",
-            "High End Engine",
-            "High End Fuel Tank",
-            "High End Chassis Rails",
-            "High End Drive Shaft",
-            "High End Exhaust Pipes"});
-            this.comboBoxChooseVehiclePartAluminum.Location = new System.Drawing.Point(288, 56);
-            this.comboBoxChooseVehiclePartAluminum.Name = "comboBoxChooseVehiclePartAluminum";
-            this.comboBoxChooseVehiclePartAluminum.Size = new System.Drawing.Size(256, 28);
-            this.comboBoxChooseVehiclePartAluminum.TabIndex = 2;
+            this.buttonPartsOther.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPartsOther.FlatAppearance.BorderSize = 0;
+            this.buttonPartsOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPartsOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonPartsOther.Location = new System.Drawing.Point(424, 8);
+            this.buttonPartsOther.Name = "buttonPartsOther";
+            this.buttonPartsOther.Size = new System.Drawing.Size(200, 52);
+            this.buttonPartsOther.TabIndex = 8;
+            this.buttonPartsOther.Text = "Other Parts";
+            this.buttonPartsOther.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPartsOther.UseVisualStyleBackColor = true;
+            this.buttonPartsOther.Click += new System.EventHandler(this.ButtonPartsOther_Click);
             // 
-            // staticLabelAluminumParts
+            // buttonPartsAluminum
             // 
-            this.staticLabelAluminumParts.Font = new System.Drawing.Font("Agency FB", 24F);
-            this.staticLabelAluminumParts.Location = new System.Drawing.Point(288, 16);
-            this.staticLabelAluminumParts.Name = "staticLabelAluminumParts";
-            this.staticLabelAluminumParts.Size = new System.Drawing.Size(256, 39);
-            this.staticLabelAluminumParts.TabIndex = 3;
-            this.staticLabelAluminumParts.Text = "Aluminum Parts";
-            this.staticLabelAluminumParts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buttonPartsAluminum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPartsAluminum.FlatAppearance.BorderSize = 0;
+            this.buttonPartsAluminum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPartsAluminum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonPartsAluminum.Location = new System.Drawing.Point(216, 8);
+            this.buttonPartsAluminum.Name = "buttonPartsAluminum";
+            this.buttonPartsAluminum.Size = new System.Drawing.Size(200, 52);
+            this.buttonPartsAluminum.TabIndex = 9;
+            this.buttonPartsAluminum.Text = "Aluminum Parts";
+            this.buttonPartsAluminum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPartsAluminum.UseVisualStyleBackColor = true;
+            this.buttonPartsAluminum.Click += new System.EventHandler(this.ButtonPartsAluminum_Click);
             // 
-            // comboBoxChooseVehiclePartOther
+            // groupBoxSelectValues
             // 
-            this.comboBoxChooseVehiclePartOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.comboBoxChooseVehiclePartOther.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxChooseVehiclePartOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxChooseVehiclePartOther.FormattingEnabled = true;
-            this.comboBoxChooseVehiclePartOther.Items.AddRange(new object[] {
-            "Windows",
-            "Tyres"});
-            this.comboBoxChooseVehiclePartOther.Location = new System.Drawing.Point(560, 56);
-            this.comboBoxChooseVehiclePartOther.Name = "comboBoxChooseVehiclePartOther";
-            this.comboBoxChooseVehiclePartOther.Size = new System.Drawing.Size(256, 28);
-            this.comboBoxChooseVehiclePartOther.TabIndex = 3;
+            this.groupBoxSelectValues.Controls.Add(this.radioButtonOres);
+            this.groupBoxSelectValues.Controls.Add(this.radioButtonSheets);
+            this.groupBoxSelectValues.Controls.Add(this.radioButtonIngots);
+            this.groupBoxSelectValues.Controls.Add(this.radioButtonPallets);
+            this.groupBoxSelectValues.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBoxSelectValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.groupBoxSelectValues.Location = new System.Drawing.Point(632, 8);
+            this.groupBoxSelectValues.Name = "groupBoxSelectValues";
+            this.groupBoxSelectValues.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBoxSelectValues.Size = new System.Drawing.Size(376, 112);
+            this.groupBoxSelectValues.TabIndex = 10;
+            this.groupBoxSelectValues.TabStop = false;
             // 
-            // staticLabelOtherParts
+            // radioButtonPallets
             // 
-            this.staticLabelOtherParts.Font = new System.Drawing.Font("Agency FB", 24F);
-            this.staticLabelOtherParts.Location = new System.Drawing.Point(560, 16);
-            this.staticLabelOtherParts.Name = "staticLabelOtherParts";
-            this.staticLabelOtherParts.Size = new System.Drawing.Size(256, 39);
-            this.staticLabelOtherParts.TabIndex = 5;
-            this.staticLabelOtherParts.Text = "Other Parts";
-            this.staticLabelOtherParts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonPallets.AutoSize = true;
+            this.radioButtonPallets.Location = new System.Drawing.Point(5, 29);
+            this.radioButtonPallets.Name = "radioButtonPallets";
+            this.radioButtonPallets.Size = new System.Drawing.Size(82, 28);
+            this.radioButtonPallets.TabIndex = 0;
+            this.radioButtonPallets.TabStop = true;
+            this.radioButtonPallets.Text = "Pallets";
+            this.radioButtonPallets.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonIngots
+            // 
+            this.radioButtonIngots.AutoSize = true;
+            this.radioButtonIngots.Location = new System.Drawing.Point(109, 29);
+            this.radioButtonIngots.Name = "radioButtonIngots";
+            this.radioButtonIngots.Size = new System.Drawing.Size(78, 28);
+            this.radioButtonIngots.TabIndex = 1;
+            this.radioButtonIngots.TabStop = true;
+            this.radioButtonIngots.Text = "Ingots";
+            this.radioButtonIngots.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSheets
+            // 
+            this.radioButtonSheets.AutoSize = true;
+            this.radioButtonSheets.Location = new System.Drawing.Point(5, 69);
+            this.radioButtonSheets.Name = "radioButtonSheets";
+            this.radioButtonSheets.Size = new System.Drawing.Size(86, 28);
+            this.radioButtonSheets.TabIndex = 2;
+            this.radioButtonSheets.TabStop = true;
+            this.radioButtonSheets.Text = "Sheets";
+            this.radioButtonSheets.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonOres
+            // 
+            this.radioButtonOres.AutoSize = true;
+            this.radioButtonOres.Location = new System.Drawing.Point(101, 69);
+            this.radioButtonOres.Name = "radioButtonOres";
+            this.radioButtonOres.Size = new System.Drawing.Size(69, 28);
+            this.radioButtonOres.TabIndex = 3;
+            this.radioButtonOres.TabStop = true;
+            this.radioButtonOres.Text = "Ores";
+            this.radioButtonOres.UseVisualStyleBackColor = true;
             // 
             // CraftingVehicleParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.comboBoxChooseVehiclePartOther);
-            this.Controls.Add(this.staticLabelOtherParts);
-            this.Controls.Add(this.comboBoxChooseVehiclePartAluminum);
-            this.Controls.Add(this.staticLabelAluminumParts);
-            this.Controls.Add(this.comboBoxChooseVehiclePartSteel);
-            this.Controls.Add(this.staticLabelSteelParts);
+            this.Controls.Add(this.groupBoxSelectValues);
+            this.Controls.Add(this.buttonPartsAluminum);
+            this.Controls.Add(this.buttonPartsOther);
+            this.Controls.Add(this.buttonPartsSteel);
+            this.Controls.Add(this.labelDebug);
             this.Name = "CraftingVehicleParts";
             this.Size = new System.Drawing.Size(1020, 520);
+            this.groupBoxSelectValues.ResumeLayout(false);
+            this.groupBoxSelectValues.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label staticLabelSteelParts;
-        private System.Windows.Forms.ComboBox comboBoxChooseVehiclePartSteel;
-        private System.Windows.Forms.ComboBox comboBoxChooseVehiclePartAluminum;
-        private System.Windows.Forms.Label staticLabelAluminumParts;
-        private System.Windows.Forms.ComboBox comboBoxChooseVehiclePartOther;
-        private System.Windows.Forms.Label staticLabelOtherParts;
+        private System.Windows.Forms.Label labelDebug;
+        private System.Windows.Forms.Button buttonPartsSteel;
+        private System.Windows.Forms.Button buttonPartsOther;
+        private System.Windows.Forms.Button buttonPartsAluminum;
+        private System.Windows.Forms.GroupBox groupBoxSelectValues;
+        private System.Windows.Forms.RadioButton radioButtonOres;
+        private System.Windows.Forms.RadioButton radioButtonSheets;
+        private System.Windows.Forms.RadioButton radioButtonIngots;
+        private System.Windows.Forms.RadioButton radioButtonPallets;
     }
 }
