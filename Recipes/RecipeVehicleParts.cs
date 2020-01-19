@@ -4,24 +4,43 @@ namespace Arma3FishersLifeCraftingGuide.Recipes
 {
     public class RecipeVehicleParts
     {
-        public int QtyPalletsAluminum { get; set; }
-        public int QtyPalletsSteel { get; set; }
-        public int QtyGlass { get; set; }
-        public int QtyRubber { get; set; }
-        public int QtyPerCraft { get; set; }
+        public int _qtyPalletsAluminum { get; set; }
+        public int _qtyPalletsSteel { get; set; }
+        public int _qtyGlass { get; set; }
+        public int _qtyRubber { get; set; }
+        public int _qtyPerCraft { get; set; }
 
         public RecipeVehicleParts(int qtyPalletsAluminum, int qtyPalletsSteel, int qtyGlass, int qtyRubber, int qtyPerCraft)
         {
-            QtyPalletsAluminum = qtyPalletsAluminum;
-            QtyPalletsSteel = qtyPalletsSteel;
-            QtyGlass = qtyGlass;
-            QtyRubber = qtyRubber;
-            QtyPerCraft = qtyPerCraft;
+            _qtyPalletsAluminum = qtyPalletsAluminum;
+            _qtyPalletsSteel = qtyPalletsSteel;
+            _qtyGlass = qtyGlass;
+            _qtyRubber = qtyRubber;
+            _qtyPerCraft = qtyPerCraft;
         }
 
         public static Dictionary<string, RecipeVehicleParts> GetVehiclePartsAluminum()
         {
             var allVehiclePartsAluminum = new Dictionary<string, RecipeVehicleParts>
+            {
+                { "4WD Differential", new RecipeVehicleParts(2, 0, 0, 0, 1) },
+                { "Fuel Tank", new RecipeVehicleParts(1, 0, 0, 0, 1)},
+                { "Chassis Rails", new RecipeVehicleParts(1, 0, 0, 0, 1) },
+                { "Exhaust Pipes", new RecipeVehicleParts(1, 0, 0, 0, 2) },
+                { "Alloy Rims", new RecipeVehicleParts(1, 0, 0, 0, 10) },
+                { "High End Engine", new RecipeVehicleParts(2, 0, 0, 0, 1) },
+                { "High End Fuel Tank", new RecipeVehicleParts(2, 0, 0, 0, 1) },
+                { "High End Chassis Rails", new RecipeVehicleParts(4, 0, 0, 0, 1) },
+                { "High End Drive Shaft", new RecipeVehicleParts(2, 0, 0, 0, 1) },
+                { "High End Exhaust Pipes", new RecipeVehicleParts(2, 0, 0, 0, 2) }
+            };
+
+            return allVehiclePartsAluminum;
+        }
+
+        public static Dictionary<string, RecipeVehicleParts> GetVehiclePartsSteel()
+        {
+            var allVehiclePartsSteel = new Dictionary<string, RecipeVehicleParts>
             {
                 { "Engine", new RecipeVehicleParts(0, 2, 0, 0, 1) },
                 { "Transmission", new RecipeVehicleParts(0, 1, 0, 0, 1)},
@@ -36,25 +55,6 @@ namespace Arma3FishersLifeCraftingGuide.Recipes
                 { "High End Differential", new RecipeVehicleParts(0, 2, 0, 0, 1) }
             };
 
-            return allVehiclePartsAluminum;
-        }
-
-        public static Dictionary<string, RecipeVehicleParts> GetVehiclePartsSteel()
-        {
-            var allVehiclePartsSteel = new Dictionary<string, RecipeVehicleParts>
-            {
-                { "4WD Differential", new RecipeVehicleParts(2, 0, 0, 0, 1) },
-                { "Fuel Tank", new RecipeVehicleParts(1, 0, 0, 0, 1)},
-                { "Chassis Rails", new RecipeVehicleParts(1, 0, 0, 0, 1) },
-                { "Exhaust Pipes", new RecipeVehicleParts(1, 0, 0, 0, 2) },
-                { "Alloy Rims", new RecipeVehicleParts(1, 0, 0, 0, 10) },
-                { "High End Engine", new RecipeVehicleParts(2, 0, 0, 0, 1) },
-                { "High End Fuel Tank", new RecipeVehicleParts(2, 0, 0, 0, 1) },
-                { "High End Chassis Rails", new RecipeVehicleParts(4, 0, 0, 0, 1) },
-                { "High End Drive Shaft", new RecipeVehicleParts(2, 0, 0, 0, 1) },
-                { "High End Exhaust Pipes", new RecipeVehicleParts(2, 0, 0, 0, 2) }
-            };
-
             return allVehiclePartsSteel;
         }
 
@@ -67,6 +67,28 @@ namespace Arma3FishersLifeCraftingGuide.Recipes
             };
 
             return allVehiclePartsOther;
+        }
+
+        public override string ToString()
+        {
+            string stringValue = "";
+
+            if (_qtyPalletsAluminum != 0)
+            {
+                stringValue += "Aluminum Pallets:  x" + _qtyPalletsAluminum + "\n";
+            }
+
+            if (_qtyPalletsSteel != 0)
+            {
+                stringValue += "Steel Pallets:  x" + _qtyPalletsSteel + "\n";
+            }
+
+            if (_qtyGlass != 0)
+            {
+                stringValue += "Glass:  x" + _qtyGlass + "\n";
+            }
+
+            return stringValue;
         }
     }
 }
