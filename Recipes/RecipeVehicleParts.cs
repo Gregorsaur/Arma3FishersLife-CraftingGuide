@@ -25,14 +25,14 @@ namespace Arma3FishersLifeCraftingGuide.Recipes
             {
                 { "4WD Differential", new RecipeVehicleParts(2, 0, 0, 0, 1) },
                 { "Fuel Tank", new RecipeVehicleParts(1, 0, 0, 0, 1)},
-                { "Chassis Rails", new RecipeVehicleParts(1, 0, 0, 0, 1) },
-                { "Exhaust Pipes", new RecipeVehicleParts(1, 0, 0, 0, 2) },
+                { "Chassis", new RecipeVehicleParts(1, 0, 0, 0, 1) },
+                { "Exhaust Pipe", new RecipeVehicleParts(1, 0, 0, 0, 2) },
                 { "Alloy Rims", new RecipeVehicleParts(1, 0, 0, 0, 10) },
                 { "High End Engine", new RecipeVehicleParts(2, 0, 0, 0, 1) },
                 { "High End Fuel Tank", new RecipeVehicleParts(2, 0, 0, 0, 1) },
-                { "High End Chassis Rails", new RecipeVehicleParts(4, 0, 0, 0, 1) },
-                { "High End Drive Shaft", new RecipeVehicleParts(2, 0, 0, 0, 1) },
-                { "High End Exhaust Pipes", new RecipeVehicleParts(2, 0, 0, 0, 2) }
+                { "High End Chassis", new RecipeVehicleParts(4, 0, 0, 0, 1) },
+                { "High End Transmission Shaft", new RecipeVehicleParts(2, 0, 0, 0, 1) },
+                { "High End Exhaust", new RecipeVehicleParts(2, 0, 0, 0, 2) }
             };
 
             return allVehiclePartsAluminum;
@@ -62,7 +62,7 @@ namespace Arma3FishersLifeCraftingGuide.Recipes
         {
             var allVehiclePartsOther = new Dictionary<string, RecipeVehicleParts>
             {
-                { "Tyres", new RecipeVehicleParts(0, 0, 0, 4, 8) },
+                { "Tires", new RecipeVehicleParts(0, 0, 0, 4, 8) },
                 { "Windows", new RecipeVehicleParts(0, 0, 2, 0, 4)}
             };
 
