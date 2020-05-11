@@ -35,11 +35,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(386, 245);
+            this.label1.Location = new System.Drawing.Point(340, 225);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 31);
+            this.label1.Size = new System.Drawing.Size(383, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Other go here...";
+            this.label1.Text = "Coming in v2.0: Other Recipes";
             // 
             // CraftingOther
             // 

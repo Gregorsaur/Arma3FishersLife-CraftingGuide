@@ -253,5 +253,10 @@ namespace Arma3FishersLifeCraftingGuide.Forms
             panelNavSide.Height = buttonNavHelp.Height;
             panelNavSide.Top = buttonNavHelp.Top;
         }
+
+        private void staticLabelFooter1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

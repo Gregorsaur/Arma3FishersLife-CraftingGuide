@@ -37,6 +37,7 @@
             this.staticLabelFooter1 = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelNavigation = new System.Windows.Forms.Panel();
+            this.panelNavSide = new System.Windows.Forms.Panel();
             this.buttonNavHelp = new System.Windows.Forms.Button();
             this.buttonNavSettings = new System.Windows.Forms.Button();
             this.buttonNavOther = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.buttonNavAircraft = new System.Windows.Forms.Button();
             this.buttonNavVehicles = new System.Windows.Forms.Button();
             this.buttonNavHome = new System.Windows.Forms.Button();
-            this.panelNavSide = new System.Windows.Forms.Panel();
             this.staticPanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staticHeaderLogo)).BeginInit();
             this.staticPanelFooter.SuspendLayout();
@@ -115,9 +115,9 @@
             this.staticLabelFooter1.Name = "staticLabelFooter1";
             this.staticLabelFooter1.Size = new System.Drawing.Size(372, 34);
             this.staticLabelFooter1.TabIndex = 0;
-            this.staticLabelFooter1.Text = "Arma 3 Fisher\'s Life Crafting Guide\r\nBy Richard Axel and Bobby Axel | v0.01 | 201" +
-    "9";
+            this.staticLabelFooter1.Text = "Arma 3 Fisher\'s Life Crafting Guide\r\nBy Richard Axel | v1.0| 2020";
             this.staticLabelFooter1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.staticLabelFooter1.Click += new System.EventHandler(this.staticLabelFooter1_Click);
             // 
             // panelContainer
             // 
@@ -145,6 +145,14 @@
             this.panelNavigation.Name = "panelNavigation";
             this.panelNavigation.Size = new System.Drawing.Size(195, 520);
             this.panelNavigation.TabIndex = 30;
+            // 
+            // panelNavSide
+            // 
+            this.panelNavSide.BackColor = System.Drawing.Color.Lime;
+            this.panelNavSide.Location = new System.Drawing.Point(0, 0);
+            this.panelNavSide.Name = "panelNavSide";
+            this.panelNavSide.Size = new System.Drawing.Size(10, 52);
+            this.panelNavSide.TabIndex = 0;
             // 
             // buttonNavHelp
             // 
@@ -304,14 +312,6 @@
             this.buttonNavHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNavHome.UseVisualStyleBackColor = true;
             this.buttonNavHome.Click += new System.EventHandler(this.ButtonNavHome_Click);
-            // 
-            // panelNavSide
-            // 
-            this.panelNavSide.BackColor = System.Drawing.Color.Lime;
-            this.panelNavSide.Location = new System.Drawing.Point(0, 0);
-            this.panelNavSide.Name = "panelNavSide";
-            this.panelNavSide.Size = new System.Drawing.Size(10, 52);
-            this.panelNavSide.TabIndex = 0;
             // 
             // FormMain
             // 
